@@ -14,8 +14,8 @@ public class NavbarPage extends Parent{
      @FindBy(xpath = "//span[text()='Human Resources']/parent::a")
      public WebElement humanResources;
 
-    @FindBy(xpath="(//span[text()='Setup'])[1]")
-    public WebElement setup;
+    @FindBy(xpath="(//span[text()='Setup'])[3]")
+    public WebElement setup3;
 
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
@@ -26,7 +26,7 @@ public class NavbarPage extends Parent{
     @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
     public WebElement citizenShip;
 
-    @FindBy(xpath = "//span[text()='Position Categories']/parent::a")
+    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")
     public WebElement positionCategories;
 
 
@@ -40,7 +40,7 @@ public class NavbarPage extends Parent{
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
-            case "setup": return this.setup;
+            case "setup": return this.setup3;
             case "parameters": return this.parameters;
             case "countries": return this.countries;
             case "citizenShip": return this.citizenShip;
