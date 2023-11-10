@@ -30,4 +30,11 @@ public class US_00 {
     public void theUserShouldBeSuccessfullyLoggedIntoTheSystem() {
         cp.assertionVerifyContains(cp.verification,"Techno Study");
     }
+    @Given("I am logged in as an admin in the dashboard")
+    public void iAmLoggedInAsAnAdminInTheDashboard() {
+        theUserIsOnTheLoginPage();
+        theUserEntersTheValidUsernameAndPassword();
+        theUserClicksTheLoginButton();
+        theUserShouldBeSuccessfullyLoggedIntoTheSystem();
+    }
 }

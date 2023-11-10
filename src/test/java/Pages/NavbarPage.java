@@ -5,11 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NevbarPage extends Parent{
+public class NavbarPage extends Parent{
 
-    public NevbarPage() {
+    public NavbarPage() {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }
+
+     @FindBy(xpath = "//span[text()='Human Resources']/parent::a")
+     public WebElement humanResources;
 
     @FindBy(xpath="(//span[text()='Setup'])[1]")
     public WebElement setup;
@@ -22,6 +25,9 @@ public class NevbarPage extends Parent{
 
     @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
     public WebElement citizenShip;
+
+    @FindBy(xpath = "//span[text()='Position Categories']/parent::a")
+    public WebElement positionCategories;
 
 
 

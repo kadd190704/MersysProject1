@@ -23,8 +23,10 @@ public class ContentPage extends Parent{
     @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginBtn;
 
-    @FindBy(xpath="//ms-add-button[contains(@tooltip,'ADD')]//button")
+    @FindBy(xpath="//ms-add-button//button")
     public WebElement addButton;
+    @FindBy(xpath="//ms-edit-button//button")
+    public WebElement editBtn;
 
     @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement verification;
