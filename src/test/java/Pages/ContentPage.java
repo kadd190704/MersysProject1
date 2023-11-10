@@ -31,6 +31,19 @@ public class ContentPage extends Parent{
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement name;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='code' ]//input")
+    public WebElement code;
+
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement save;
+
+    @FindBy(id = "")
+    public WebElement a;
+
+    @FindBy(css="//ms-edit-button//button")
+    public WebElement edit;
+
+
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
     @FindBy(xpath="//div[contains(text(),'successfully')]")
