@@ -28,6 +28,8 @@ public class NevbarPage extends Parent {
 
     @FindBy(xpath = "//span[text()='School Setup']")
     public WebElement schoolsetup;
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
 
     @FindBy(xpath = "//span[text()='Position Categories']")
     public WebElement positioncategories;
