@@ -23,38 +23,19 @@ public class ContentPage extends Parent{
     @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginBtn;
 
-    @FindBy(xpath="//ms-add-button[contains(@tooltip,'ADD')]//button")
+    @FindBy(xpath="//ms-add-button//button")
     public WebElement addButton;
+    @FindBy(xpath="//ms-edit-button//button")
+    public WebElement editBtn;
 
     @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement verification;
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement name;
 
-    @FindBy(xpath="//input[@data-placeholder='Short Name']")
-    public WebElement shortN;
+    @FindBy(xpath="(//input[@data-placeholder='Name'])[2]")
+    public WebElement name2;
 
-
-
-    @FindBy(xpath="//button[@aria-label='Maximizes']")
-    public WebElement buttonmax;
-
-    @FindBy(xpath="//input[@inputmode='numeric']")
-    public WebElement numeric;
-
-
-
-    @FindBy(xpath="//ms-text-field[@formcontrolname='code' ]//input")
-    public WebElement code;
-
-    @FindBy(xpath = "//span[text()='Save']")
-    public WebElement save;
-
-//    @FindBy(id = "[ms-table-16_id]")
-//    public WebElement a;
-
-    @FindBy(css="//ms-edit-button//button")
-    public WebElement edit;
 
 
     @FindBy(xpath="//ms-save-button/button")
@@ -78,9 +59,6 @@ public class ContentPage extends Parent{
 
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteContentBtn;
-
-    @FindBy(xpath="[aria-describedby='cdk-describedby-message-ng-1-34']")
-    public WebElement a;
 
 
 
