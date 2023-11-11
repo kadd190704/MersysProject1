@@ -2,6 +2,7 @@ package stepDefs;
 
 import Pages.ContentPage;
 import Pages.NavbarPage;
+import Pages.Parent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,7 @@ public class US_01 {
 
     NavbarPage np=new NavbarPage();
     ContentPage cp=new ContentPage();
+    Parent pp=new Parent();
 
     @And("Navigate to Position Categories")
     public void navigateToPositionCategories() {
@@ -28,7 +30,7 @@ public class US_01 {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-
+     pp.assertionVerifyContains(cp.successMessage,"success");
 
     }
     @And("User must be able to edit Position Categories")
@@ -39,8 +41,8 @@ public class US_01 {
     }
 
     @When("User delete the {string}")
-    public void userDeleteThe(String arg0) {
-        cp.click(cp.deleteContentBtn);
+    public void userDeleteThe(String name) {
+        cp.deleteItem(name);
 
     }
 
