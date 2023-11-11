@@ -30,9 +30,10 @@ public class US_01 {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-     pp.assertionVerifyContains(cp.successMessage,"success");
+     pp.assertionVerifyContains(cp.successMessage,"successfully");
 
     }
+
     @And("User must be able to edit Position Categories")
     public void userMustBeAbleToEditPositionCategories() {
         cp.click(cp.editBtn);
@@ -41,8 +42,10 @@ public class US_01 {
     }
 
     @When("User delete the {string}")
-    public void userDeleteThe(String name) {
-        cp.deleteItem(name);
+    public void userDeleteThe(String arg0) throws InterruptedException {
+        cp.deleteItem("Yusuf2");
+        cp.click(cp.deleteContentBtn);
+
 
     }
 

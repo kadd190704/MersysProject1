@@ -33,9 +33,30 @@ public class ContentPage extends Parent{
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
     public WebElement name;
 
-    @FindBy(xpath="(//input[@data-placeholder='Name'])[2]")
-    public WebElement name2;
+    @FindBy(xpath="//input[@data-placeholder='Short Name']")
+    public WebElement shortN;
 
+
+
+    @FindBy(xpath="//button[@aria-label='Maximizes']")
+    public WebElement buttonmax;
+
+    @FindBy(xpath="//input[@inputmode='numeric']")
+    public WebElement numeric;
+
+
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='code' ]//input")
+    public WebElement code;
+
+    @FindBy(xpath = "//span[text()='Save']")
+    public WebElement save;
+
+//    @FindBy(id = "[ms-table-16_id]")
+//    public WebElement a;
+
+    @FindBy(css="//ms-edit-button//button")
+    public WebElement edit;
 
 
     @FindBy(xpath="//ms-save-button/button")
@@ -59,6 +80,9 @@ public class ContentPage extends Parent{
 
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteContentBtn;
+
+    @FindBy(xpath="[aria-describedby='cdk-describedby-message-ng-1-34']")
+    public WebElement a;
 
 
 
@@ -84,7 +108,7 @@ public class ContentPage extends Parent{
     }
 
 
-    public void deleteItem(String searchText){
+    public void deleteItem(String searchText) throws InterruptedException {
         sendKeys(searchInput, searchText);
         click(searchButton); // fuse bar ı çocukları ortaya çıkıyor
 
@@ -96,10 +120,13 @@ public class ContentPage extends Parent{
         //2.yöntem sayfanın kendi waitini , loding ini yakalayalım. (en sağlam yöntem)
         //fuse-progress-bar/*    -> fuse-progress-bar ın çocukları
         // bu çocukların 0 olana bekle
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+        //wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//tr"), 2));
 
         click(deleteImageBtn);
         click(deleteContentBtn);
+        Thread.sleep(2000);
 
         // silme ıslemı dıalogların ortak noktası olması sebebıyle buraya aldık. Silme islemi yapacagımız her seferınde tekrar tekrar kod yazmayalım dırekt cagıralım dıye aldık.
     }

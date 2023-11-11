@@ -1,7 +1,7 @@
 package stepDefs;
 
 import Pages.ContentPage;
-import Pages.NevbarPage;
+import Pages.NavbarPage;
 import Utilities.DriverManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 
 public class US_07 {
 
-    NevbarPage np = new NevbarPage();
+    NavbarPage np = new NavbarPage();
     ContentPage cp = new ContentPage();
 
     @Given("User logs in as an administrator")
@@ -23,7 +23,7 @@ public class US_07 {
 
     @And("goes to the School Locations tab")
     public void goesToTheSchoolLocationsTab() {
-        np.click(np.setup);
+        np.click(np.getWebElement("setup"));
         np.click(np.schoolsetup);
         np.click(np.locations);
     }
