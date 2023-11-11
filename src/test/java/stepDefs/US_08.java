@@ -12,7 +12,7 @@ public class US_08 {
 
     @Given("the user is on the Document Types page")
     public void theUserIsOnTheDocumentTypesPage() {
-        np.click(np.setup);
+        np.click(np.getWebElement("setup"));
         np.click(np.schoolsetup);
         np.click(np.departments);
     }

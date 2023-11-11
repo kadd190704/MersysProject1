@@ -23,7 +23,7 @@ public class US_07 {
 
     @And("goes to the School Locations tab")
     public void goesToTheSchoolLocationsTab() {
-        np.click(np.setup);
+        np.click(np.getWebElement("setup"));
         np.click(np.schoolsetup);
         np.click(np.locations);
     }

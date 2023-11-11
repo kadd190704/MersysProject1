@@ -108,7 +108,7 @@ public class ContentPage extends Parent{
     }
 
 
-    public void deleteItem(String searchText){
+    public void deleteItem(String searchText) throws InterruptedException {
         sendKeys(searchInput, searchText);
         click(searchButton); // fuse bar ı çocukları ortaya çıkıyor
 
@@ -120,10 +120,13 @@ public class ContentPage extends Parent{
         //2.yöntem sayfanın kendi waitini , loding ini yakalayalım. (en sağlam yöntem)
         //fuse-progress-bar/*    -> fuse-progress-bar ın çocukları
         // bu çocukların 0 olana bekle
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+        //wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
+
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//tr"), 2));
 
         click(deleteImageBtn);
         click(deleteContentBtn);
+        Thread.sleep(2000);
 
         // silme ıslemı dıalogların ortak noktası olması sebebıyle buraya aldık. Silme islemi yapacagımız her seferınde tekrar tekrar kod yazmayalım dırekt cagıralım dıye aldık.
     }
