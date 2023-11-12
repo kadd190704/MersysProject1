@@ -24,13 +24,13 @@ public class US_08 {
         cp.sendKeys(cp.name, "ahmet");
         cp.sendKeys(cp.code, "11");
         cp.click(cp.save);
-
+        cp.click(cp.a);
     }
 
     @Then("they should be able to edit its name later")
     public void theyShouldBeAbleToEditItsNameLater() {
         cp.click(cp.edit);
-        cp.sendKeys(cp.name, "ahmet Taşdelen");
+        cp.sendKeys(cp.name, "ahmet ali");
         cp.sendKeys(cp.code, "111");
         cp.click(cp.save);
     }

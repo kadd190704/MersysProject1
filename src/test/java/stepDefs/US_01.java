@@ -16,9 +16,9 @@ public class US_01 {
 
     @And("Navigate to Position Categories")
     public void navigateToPositionCategories() {
-        np.click(np.humanResources);
-        np.click(np.setup3);
-        np.click(np.positionCategories);
+//        np.click(np.humanResources);
+//        np.click(np.setup3);
+//        np.click(np.positionCategories);
     }
 
     @When("Create a New Position Category")

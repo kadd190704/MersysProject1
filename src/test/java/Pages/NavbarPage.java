@@ -1,15 +1,19 @@
 package Pages;
 
 import Utilities.DriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 
 public class NavbarPage extends Parent {
 
     public NavbarPage() {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }
+
+
 
     @FindBy(xpath = "//span[text()='Human Resources']/parent::a")
     public WebElement humanResources;
@@ -69,8 +73,8 @@ public class NavbarPage extends Parent {
 
         return null;
     }
-
-
 }
+
+
 
 

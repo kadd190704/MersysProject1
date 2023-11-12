@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.DriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,6 @@ import java.time.Duration;
 public class Parent {
 
     public WebDriverWait wait=new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20));
-
     public void click(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
         wait.until(ExpectedConditions.visibilityOf(element));

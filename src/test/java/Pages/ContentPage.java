@@ -52,12 +52,9 @@ public class ContentPage extends Parent{
     @FindBy(xpath = "//span[text()='Save']")
     public WebElement save;
 
-//    @FindBy(id = "[ms-table-16_id]")
-//    public WebElement a;
 
-    @FindBy(css="//ms-edit-button//button")
+    @FindBy(xpath="(//ms-edit-button//button//fa-icon)[1]")
     public WebElement edit;
-
 
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
@@ -81,8 +78,13 @@ public class ContentPage extends Parent{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteContentBtn;
 
-    @FindBy(xpath="[aria-describedby='cdk-describedby-message-ng-1-34']")
+    @FindBy(xpath="(//th[@rowspan='none'][1])")
     public WebElement a;
+
+
+    @FindBy(id="[id='container-3']")
+    public WebElement bosluk;
+
 
 
 
