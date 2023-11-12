@@ -37,6 +37,7 @@ public class US_07 {
         cp.click(cp.save);
         cp.click(cp.addButton);
 
+
     }
     @And("edits the School Location information")
     public void editsTheSchoolLocationInformation() {
